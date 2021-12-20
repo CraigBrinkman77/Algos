@@ -30,8 +30,8 @@ const expected4 = { quarter: 3, dime: 2, penny: 4 };
 function fewestCoinChange(cents) {
     frequencyCounter = {'quarter' : Math.floor(cents / 25),
                         'dime' : Math.floor((cents % 25)/10),
-                        'nickle' : Math.floor(((cents % 25)%10)/5),
-                        'penny' :  (((cents % 25)%10)%5)/1
+                        'nickle' : Math.floor((cents % 10)/5),
+                        'penny' :  (cents % 5)
 }
 return frequencyCounter
 }
